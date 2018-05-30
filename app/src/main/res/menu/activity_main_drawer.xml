@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_action_home_48"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_court"
+            android:icon="@drawable/ic_action_sport_net_48"
+            android:title="Court View" />
+        <item
+            android:id="@+id/nav_queue"
+            android:icon="@drawable/ic_action_queue_48"
+            android:title="Queue View" />
+        <item
+            android:id="@+id/nav_QSkill"
+            android:icon="@drawable/ic_action_select_all_48"
+            android:title="All Players" />
+    </group>
+
+    <item android:title="Settings" android:icon="@drawable/ic_menu_manage">
+        <menu>
+            <item
+                android:id="@+id/nav_account"
+                android:icon="@drawable/ic_action_edit_user_male_96"
+                android:title="Update Profile" />
+            <item
+                android:id="@+id/nav_club"
+                android:icon="@drawable/ic_action_edit_image_96"
+                android:title="Update Club" />
+        </menu>
+    </item>
+
+</menu>

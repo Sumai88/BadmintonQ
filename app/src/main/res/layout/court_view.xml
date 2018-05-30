@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:textColor="#FF000000"
+            android:visibility="gone"
+            android:height="40dp"
+            android:gravity="center"
+            style="?android:textAppearanceMedium"
+            android:id="@+id/textSeparator"/>
+    </LinearLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF000000"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:height="40dp"
+        style="?android:textAppearanceMedium"
+        android:gravity="center_vertical"
+        android:id="@+id/txtTeam"/>
+    <EditText
+        android:id="@+id/txtScore"
+        android:hint="Score"
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        style="?android:textAppearanceMedium"
+        android:layout_alignRight="@+id/txtItem"
+        android:layout_alignEnd="@+id/txtItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+</LinearLayout>

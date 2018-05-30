@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">BadmintonQ</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="title_main_activity">Get into Queue</string>
+    <string name="title_club_activity">Add/Update Club</string>
+    <string name="title_player_activity">Add/Update Player</string>
+    <string name="title_register_activity">Register!!!</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="facebook_app_id">123736284710096</string>
+    <string name="fb_login_protocol_scheme">fb123736284710096</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string-array name="skill_array">
+        <item>Intermediate</item>
+        <item>Advance</item>
+        <item>Elite</item>
+    </string-array>
+    <string name="title_activity_qskill">Players By Skill</string>
+    <string name="title_activity_court">Court View from Club</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+</resources>

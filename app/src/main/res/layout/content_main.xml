@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:mstb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.badmintonq.sumai.badmintonq.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <ProgressBar
+        android:id="@+id/ctlProgress"
+        android:layout_centerHorizontal="true"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Badminton Queuing System!!!" />
+
+    <AutoCompleteTextView
+            android:id="@+id/txtClubs"
+            android:hint="Select a club!!!"
+            android:layout_below="@+id/txtWelcome"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+        android:imeOptions="actionNext"
+        android:layout_marginTop="50dp" />
+
+    <ImageButton
+        android:id="@+id/fabClub"
+        android:contentDescription="Add Club"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="60dp"
+        android:layout_alignBottom="@+id/txtClubs"
+        android:src="@drawable/ic_1472753070_add"
+        android:layout_marginLeft="290dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <AutoCompleteTextView
+        android:id="@+id/txtPlayers"
+        android:imeOptions="actionDone"
+        android:hint="Select a player!!!"
+        android:layout_below="@+id/txtClubs"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/fabPlayer"
+        android:contentDescription="Add Player"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="105dp"
+        android:layout_alignBottom="@+id/txtPlayers"
+        android:src="@drawable/ic_1472753070_add"
+        android:layout_marginLeft="290dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/lblSkillset"
+        android:layout_below="@+id/txtPlayers"
+        android:layout_marginTop="10dp"
+        style="?android:textAppearanceMedium"
+        android:text=" Skill:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <org.honorato.multistatetogglebutton.MultiStateToggleButton
+        android:id="@+id/multiSkill"
+        android:layout_below="@+id/lblSkillset"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mstb:values="@array/skill_array"
+        mstb:mstbPrimaryColor="@color/white"
+        mstb:mstbSecondaryColor="@color/green"/>
+
+    <Button
+        android:id="@+id/btnQueue"
+        android:text="Get into Queue"
+        android:layout_below="@+id/multiSkill"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="AddToQueue"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

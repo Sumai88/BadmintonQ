@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.badmintonq.sumai.badmintonq.ClubActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.badmintonq.sumai.badmintonq.ClubActivity">
+
+        <ProgressBar
+            android:id="@+id/ctlProgress"
+            android:layout_centerHorizontal="true"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            style="?android:textAppearanceMedium"
+            android:text="Please enter the club details!!!" />
+
+        <LinearLayout
+            android:id="@+id/layClub"
+            android:orientation="horizontal"
+            android:layout_below="@+id/txtWelcome"
+            android:layout_width="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtCourt"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:textAppearanceMedium"
+                android:text="No of Courts:   " />
+            <NumberPicker
+                android:id="@+id/noClubs"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                style="?android:textAppearanceMedium"
+                android:padding="-100dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtName"
+            android:layout_below="@+id/layClub"
+            android:singleLine="true"
+            android:hint="Club Name" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:id="@+id/txtEmail"
+            android:hint="Club Email address"
+            android:layout_below="@+id/txtName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtOrganizer"
+            android:hint="Organizer Name"
+            android:layout_below="@+id/txtEmail"
+            android:layout_alignParentLeft="true"
+            android:singleLine="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtStreet"
+            android:hint="Street Name"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:layout_below="@+id/txtOrganizer"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:id="@+id/layAddress"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/txtStreet"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCity"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:hint="City" />
+            <EditText
+                android:layout_marginLeft="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtState"
+                android:singleLine="true"
+                android:hint="State" />
+            <EditText
+                android:layout_marginLeft="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtZip"
+                android:singleLine="true"
+                android:inputType="number"
+                android:hint="Zip Code" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layButtons"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/layAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnSubmit"
+                android:text="Submit"
+                android:onClick="submitChanges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:text="Cancel"
+                android:onClick="cancelChanges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lblError"
+            android:textStyle="bold"
+            android:textColor="#e71313"
+            android:layout_centerHorizontal="true"
+            style="?android:textAppearanceMedium"
+            android:layout_gravity="center"
+            android:layout_below="@+id/layButtons"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
